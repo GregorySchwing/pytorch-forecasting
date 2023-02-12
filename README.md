@@ -58,6 +58,14 @@ PyTorch Forecasting is now installed from the conda-forge channel while PyTorch 
 To use the MQF2 loss (multivariate quantile loss), also install
 `pip install pytorch-forecasting[mqf2]`
 
+For Docker:
+
+sudo docker run --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 --rm -it -p 8888:8888  nvcr.io/nvidia/pytorch:22.07-py3
+pip install pytorch_lightning==1.9.0
+pip install pytorch-forecasting
+pip install tensorboard
+jupyter lab --allow-root --ip 0.0.0.0 --port 8888
+
 # Documentation
 
 Visit [https://pytorch-forecasting.readthedocs.io](https://pytorch-forecasting.readthedocs.io) to read the
